@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EDa-oK-1iu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Multiple Selection-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="standard-male-figure" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWX-TN-DT8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </sceneKitView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcN-10-rRI">
+                                <rect key="frame" x="16" y="598" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-5r-IIj">
+                                <rect key="frame" x="16" y="28" width="107" height="30"/>
+                                <state key="normal" title="Reset Selection"/>
+                                <connections>
+                                    <action selector="resetSelection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SUG-cA-PQt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQU-dw-x2Z">
+                                <rect key="frame" x="313" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="goToNextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z7W-AI-oah"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bWX-TN-DT8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3xF-Eo-N9d"/>
+                            <constraint firstAttribute="trailing" secondItem="bWX-TN-DT8" secondAttribute="trailing" id="Bli-3y-dfZ"/>
+                            <constraint firstItem="jC3-5r-IIj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CNB-k3-bu4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WcN-10-rRI" secondAttribute="bottom" constant="20" id="Tmz-Ia-6iK"/>
+                            <constraint firstItem="jC3-5r-IIj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gxA-uw-K8N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bWX-TN-DT8" secondAttribute="bottom" id="muU-Kw-1pI"/>
+                            <constraint firstItem="WcN-10-rRI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="p6d-Ag-sWa"/>
+                            <constraint firstItem="bWX-TN-DT8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tGL-9x-sZI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Multiple Selection" id="J79-dV-9RG"/>
+                    <connections>
+                        <outlet property="sceneView" destination="bWX-TN-DT8" id="u3S-lP-fgX"/>
+                        <outlet property="touchedLocationLabel" destination="WcN-10-rRI" id="Xy0-u9-Goq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="123.68815592203899"/>
+        </scene>
+        <!--Signle Selection-->
+        <scene sceneID="1YA-nT-IRZ">
+            <objects>
+                <viewController id="dws-qZ-YjP" customClass="SingleSelectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UGY-EW-XJk"/>
+                        <viewControllerLayoutGuide type="bottom" id="czT-lp-j4a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RIw-BZ-Hdf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="standard-male-figure" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Km0-6O-aSR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </sceneKitView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y2-zo-1mD">
+                                <rect key="frame" x="16" y="598" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMO-bh-VCn">
+                                <rect key="frame" x="313" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="goToNextScreen:" destination="dws-qZ-YjP" eventType="touchUpInside" id="Mnq-7K-3Um"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Km0-6O-aSR" firstAttribute="top" secondItem="UGY-EW-XJk" secondAttribute="bottom" id="8yY-PB-9Ld"/>
+                            <constraint firstItem="Km0-6O-aSR" firstAttribute="leading" secondItem="RIw-BZ-Hdf" secondAttribute="leading" id="Af6-we-apn"/>
+                            <constraint firstItem="9y2-zo-1mD" firstAttribute="leading" secondItem="RIw-BZ-Hdf" secondAttribute="leadingMargin" id="CYW-5B-YvP"/>
+                            <constraint firstItem="czT-lp-j4a" firstAttribute="top" secondItem="9y2-zo-1mD" secondAttribute="bottom" constant="20" id="gsO-NL-JRW"/>
+                            <constraint firstItem="czT-lp-j4a" firstAttribute="top" secondItem="Km0-6O-aSR" secondAttribute="bottom" id="qyV-vx-Wvo"/>
+                            <constraint firstAttribute="trailing" secondItem="Km0-6O-aSR" secondAttribute="trailing" id="zIa-MQ-fzk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Signle Selection" id="5HU-gV-0FJ"/>
+                    <connections>
+                        <outlet property="sceneView" destination="Km0-6O-aSR" id="taM-Re-cUt"/>
+                        <outlet property="touchedLocationLabel" destination="9y2-zo-1mD" id="xzY-ky-S8F"/>
+                        <segue destination="edH-P8-Jrb" kind="show" identifier="showImage" id="js1-4V-cdw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L51-FL-M24" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="951"/>
+        </scene>
+        <!--Screen Shot View Controller-->
+        <scene sceneID="Ibk-yw-71z">
+            <objects>
+                <viewController id="edH-P8-Jrb" customClass="ScreenShotViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oeM-SL-HzM"/>
+                        <viewControllerLayoutGuide type="bottom" id="JHM-8C-pN2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZqV-Lo-Hxo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tpo-62-pHU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so5-od-0X3">
+                                <rect key="frame" x="320" y="28" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="edH-P8-Jrb" eventType="touchUpInside" id="AHo-Qa-UOI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tpo-62-pHU" firstAttribute="height" secondItem="ZqV-Lo-Hxo" secondAttribute="height" id="9Z3-Jx-Ml2"/>
+                            <constraint firstItem="tpo-62-pHU" firstAttribute="centerX" secondItem="ZqV-Lo-Hxo" secondAttribute="centerX" id="GF2-zR-G74"/>
+                            <constraint firstItem="tpo-62-pHU" firstAttribute="width" secondItem="ZqV-Lo-Hxo" secondAttribute="width" id="Y9Z-9m-Amw"/>
+                            <constraint firstItem="so5-od-0X3" firstAttribute="top" secondItem="oeM-SL-HzM" secondAttribute="bottom" constant="8" id="hb3-vG-j6w"/>
+                            <constraint firstItem="tpo-62-pHU" firstAttribute="centerY" secondItem="ZqV-Lo-Hxo" secondAttribute="centerY" id="r2u-g1-exL"/>
+                            <constraint firstAttribute="trailing" secondItem="so5-od-0X3" secondAttribute="trailing" constant="16" id="rrZ-WG-Yth"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="tpo-62-pHU" id="x9t-mn-HBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xiA-l4-NJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.5999999999999" y="949.47526236881572"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kpN-tk-eLM">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EDa-oK-1iu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="rq4-uC-rfG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="yll-hC-z5j"/>
+                        <segue destination="dws-qZ-YjP" kind="relationship" relationship="viewControllers" id="iR2-5z-zdl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ow6-Bj-enG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
